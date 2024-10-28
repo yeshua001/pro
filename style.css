@@ -1,0 +1,558 @@
+
+body{
+    background-color: rgb(238, 237, 236);
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+.sidebar {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 260px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 3; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #ffffff; /* Black */
+    overflow-x: auto; /* Disable horizontal scroll */
+    padding-top: 20px;
+    padding-left: 20px;
+    display: block;
+  }
+  .sidebar img{
+    width: 120px;      /* Adjust to desired size */
+    height: 120px;     /* Ensure it's a square for a circular crop */
+    border-radius: 10%; /* Make it circular */
+    object-fit: cover;  /* Crop image to fit within the circle */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.portfolio-link{
+    color: #3bb49a;
+    text-decoration: none;
+}
+.contact-link{ 
+    color:#000000;  
+    display: flex;
+    text-decoration: none;   
+}
+.About-link {
+    color:#000000;  
+    display: flex;
+    text-decoration: none;  
+}
+
+.link{
+    margin: 1Px; /* Space between icon and text */
+     
+}
+
+ .contact-link:hover{
+    background-color: #b3b3b3;
+}
+.About-link:hover{
+    background-color: #b3b3b3;
+}
+.portfolio-link:hover{
+    background-color: #b3b3b3;
+}
+
+
+.social-icons {
+    display: flex;                  /* Align icons in a row */
+    gap: 8px;                     /* Space between icons */
+}
+
+.social-icons a {
+    color: #000000;                   /* Icon color */
+    font-size: 18px;              /* Icon size */
+    text-decoration: none;         /* Remove underline */
+    transition: color 0.3s;       /* Smooth color transition on hover */
+}
+
+.social-icons a:hover {
+    color: #007bff;                /* Change color on hover */
+}
+
+.main {
+    margin-left: 280px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    padding-bottom: 20px;
+    flex: 3;
+    padding: 20px;
+  }
+
+.btn {
+    border: none; /* Remove borders */
+    color: rgb(2, 0, 0); /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .filter {background-color: none}  
+  
+
+  .all {background-color: #030000;
+        color: #ffffff;
+}  
+  .all:hover {background-color: #e0e0e0;}
+  
+  .design {background-color: #ffffff;}  
+  .design:hover {background: #e0e0e0;}
+  
+  .photo {background-color: #ffffff;} 
+  .photo:hover {background: #e0e0e0;}
+  
+  .art {background-color: #ffffff;}  
+  .art:hover {background: #e0e0e0;}
+
+  .line {
+    width: 100%; /* or specify a fixed width */
+    height: 5px; /* or specify a thicker line */
+    background-color: #948c8c; /* or specify a different color */
+    border: none;
+    margin: 10px 0; /* adjust margin for spacing */
+  }
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 10px;
+    text-align: center; /* Center-align the text */
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-item img {
+    
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+.image-item img:hover {
+     
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
+    opacity: 0.5;
+}
+
+.image-item p {
+    margin-top: 5px; /* Space between image and text */
+    font-size: 18px; /* Adjust font size as desired */
+    color: #000000; /* Customize text color */
+    padding: 10px;                   /* Space inside the box */
+    background-color: #ffffff;      /* Background color */ 
+    text-align: left; 
+    max-width: fit-content;           
+    margin: 1px auto;     
+}
+
+/* Basic styling for the pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 8px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0;
+    color: #000000;
+    background-color:none;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Styling for active page (page 1) */
+.pagination .active {
+    background-color: #000;  /* Black background for active page */
+    color: #fff;  /* White text */
+}
+
+/* Hover effect for pagination numbers */
+.pagination a.number:hover {
+    background-color: #000000;
+}
+
+/* Styling for arrows */
+.pagination a.arrow {
+    font-size: 18px;
+    background-color:none;
+}
+
+.pagination a.arrow:hover {
+    background-color: #000000;
+}
+
+
+.image-container {
+    display: flex;
+    gap: 20px; /* Space between images */    
+}
+
+.image-container img{
+    width: 45vw;        /* Full viewport width */
+    height: 45vh;       /* Full viewport height */
+}
+.text{
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #9e9e9e /* Grey background */
+}
+.tech{
+    font-size: 20px;
+}
+.together{
+    font-size: 15px;
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 5px; /* Add top padding */
+  padding-bottom:5px; /* Add bottom padding */
+  color: white; /* White text color */
+  font-size: 17px;
+}
+
+.Photography {width: 95%; background-color: #616161} 
+.web {width: 80%; background-color:#616161} 
+.photoshop{width: 80%; background-color:#616161} 
+.video {width: 60%; background-color: #616161}
+
+.skills:hover {
+    background-color:#999292;
+}
+ 
+.download-button {
+    display: inline-flex;           /* Align icon and text */
+    align-items: center;            /* Center icon and text vertically */
+    padding: 10px 10px;
+    color: white;
+    background-color: #707070;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.download-button i {
+    margin-right: 18px;              /* Space between icon and text */
+    font-size: 18px;                /* Adjust icon size */
+}
+
+.download-button:hover {
+    background-color: #9b9898;
+}
+
+ .charge{
+    font-size: 20px;
+ }
+ 
+/* Basic styling for table container */
+.table-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 -14px;
+    gap: 20px; /* Space between tables */
+}
+
+.table-column {
+    margin: 10px;
+}
+
+.table {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+    width: 280px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    font-size: 0.8em;opacity: 0.7; /* Set initial opacity */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Remove opacity on hover */
+.table:hover {
+    opacity: 1;
+}
+
+
+/* Horizontal line styling for table items */
+.table li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table .header {
+    background-color: #333;
+    color: white;
+    font-size: 0.8em;
+    padding: 20px;
+}
+.table .header1 {
+    background-color: #009688;
+    color: white;
+    font-size: 0.8em;
+    padding: 20px;
+}
+
+.table .inside li {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styling for the price section */
+.table .price {
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 7px;
+}
+
+/* Remove border on the last item */
+.table li:last-child {
+    border-bottom: none;
+}
+
+/* Button styling */
+.sign-up {
+     background-color: #009688;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.sign-up:hover {
+    background-color: #000000;
+}
+
+
+.new{
+    background-color: #9e9e9e;
+}
+
+.me{
+    font-size: x-large;
+    
+}
+ 
+/* Flex container to hold icons side by side */
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 97%;
+    margin-right:50px;
+    padding-right:200px;
+  }
+  
+  /* Styling individual icon boxes */
+  .icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    padding-bottom:30px;
+    flex: 1;
+    width:fit-content;
+    max-width: 100%; 
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  /* Specific colors for each icon */
+  .icon-box.email {
+    background-color: #616161;; /* Example color for email */
+  }
+  
+  .icon-box.location {
+    background-color: #009688; /* Example color for location */
+  }
+  
+  .icon-box.phone {
+    background-color: #616161; /* Example color for phone */
+  }
+  
+  /* Ensuring icons and text appear vertically centered within each box */
+  .icon-box i {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 36px; /* Larger icon size */
+  }
+
+  
+.form-group {
+    margin-bottom: 15px;         /* Space between form groups */
+    padding-left: 300px;
+    padding-top: 5px;
+    margin-top: 30px;
+
+}
+
+label {
+    display: block;              /* Make labels block elements */
+    margin-bottom: 2px;         /* Space below labels */
+margin-top: 10px;
+margin-bottom: px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width:95%;                 /* Full width inputs */
+    padding: 10px;               /* Padding inside inputs */
+    border: 1px solid #ddd;      /* Border for inputs */
+              
+}
+
+textarea {
+    resize: none;                /* Prevent resizing of textarea */
+}
+
+.submit-button {
+    background-color: #000000;  /* Button color */
+    color: white;                /* White text color */
+    border: none;                /* No border */
+    padding: 10px 5px;         /* Padding for button */
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    font-size: 16px;             /* Font size for button */
+    cursor: pointer;             /* Pointer cursor on hover */
+    padding: 10px;               /* Padding inside inputs */
+    border: 0px  ;      /* Border for inputs */
+    margin-left: 23.4%;        
+    width: 16%;                 /* Full width button */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.submit-button:hover {
+    background-color: #999999;  /* Darker shade on hover */
+}
+.footers {
+    display: flex;
+    background-color: #333;
+    color: white;
+    width: 93.7%;
+    justify-content: center;
+    padding: 41.5px;
+    padding-bottom:34px;
+    
+}
+
+.footer-section1{
+   flex: grid;
+   padding-left: 232px;
+  
+}
+
+.footer-section2{
+    flex: grid;
+    margin-left: 100px;
+ }
+
+ .footer-section3{
+    flex: grid; 
+    margin-left: 100px;
+ }
+ 
+
+/* Container for the list */
+ul.w3-ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin: 0; 
+    border: 1px 
+}
+
+.w3-ul :hover {
+background-color: #e2e1e1;
+}
+
+/* Style each list item */
+ul.w3-ul li {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+ul.w3-ul li:last-child {
+    border-bottom: none; /* Remove bottom border on last item */
+}
+
+/* Style for images */
+ul.w3-ul li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 5px; /* Optional: rounded image corners */
+}
+
+
+
+/* Styling for the container */
+.popular {
+    max-width: 600px; /* Adjust width if needed */
+    line-height: 0.5; /* Space between lines */
+    gap: 0px;
+}
+
+/* Styling for each tag */
+.popular .tags{
+    display: inline-block;
+    background-color: #b1b1b1;
+    color: #000000;
+    padding: 4px 10px;
+    margin: 4px;
+    font-size: 14px;
+   
+    
+}
+/* Specific style for the first tag */
+.popular .tags:first-child {
+    background-color: #000;
+    color: #fff;
+}
+
+.last{
+    background-color: #000;
+    color: #ffffff;
+    padding-top: 24px;
+    padding-bottom: 30px;
+    text-align: center;
+    
+}
+.lasts{
+    color: #ffffff;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text within container */ 
+     
+     
+    
+    
+}
+ 
